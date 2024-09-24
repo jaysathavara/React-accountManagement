@@ -34,6 +34,10 @@ const RegisterPage = () => {
     navigate('/login');
   };
 
+  const onClick = () =>{
+    navigate('/login')
+  }
+
   return (
     <div className="container mt-5">
       <h2>Register</h2>
@@ -74,7 +78,11 @@ const RegisterPage = () => {
           <label>Password</label>
           <input type="password" className="form-control" value={password} onChange={(e) => setPassword(e.target.value)} required />
         </div>
-        <button type="submit" className="btn btn-primary">Register</button>
+        <button type="submit" className="btn btn-primary mb-3">Register</button>
+        <div className='mb-3'>
+
+        <a className='bs-info bs-info' role='button' onClick={onClick}>Already have an account?</a>
+        </div>
       </form>
     </div>
   );
